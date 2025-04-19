@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:go_router/go_router.dart';
-import 'package:grabber_grocery_app/app_router.dart';
+import 'package:grabber_grocery_app/Utils/app_router.dart';
 
 class SplashView extends StatefulWidget {
   const SplashView({super.key});
