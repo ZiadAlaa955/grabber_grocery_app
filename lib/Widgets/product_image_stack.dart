@@ -28,17 +28,14 @@ class ProductImageStack extends StatelessWidget {
         Positioned(
           left: 105,
           top: 80,
-          child: GestureDetector(
-            onTap: () {},
-            child: Material(
-              elevation: 1.5,
-              borderRadius: BorderRadius.circular(50),
-              child: Padding(
-                padding: const EdgeInsets.all(2),
-                child: GestureDetector(
-                  onTap: () {},
-                  child: const Icon(Icons.add),
-                ),
+          child: Material(
+            elevation: 1.5,
+            borderRadius: BorderRadius.circular(50),
+            child: Padding(
+              padding: const EdgeInsets.all(2),
+              child: GestureDetector(
+                onTap: () {},
+                child: const Icon(Icons.add),
               ),
             ),
           ),

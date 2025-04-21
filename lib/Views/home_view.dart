@@ -6,6 +6,7 @@ import 'package:grabber_grocery_app/Widgets/home_category_listview_builder.dart'
 import 'package:grabber_grocery_app/Widgets/home_products_listview_builder.dart';
 import 'package:grabber_grocery_app/Widgets/homw_carousel_slider_builder.dart';
 import 'package:grabber_grocery_app/Widgets/navigation_bar.dart';
+import 'package:grabber_grocery_app/Widgets/view_baskeet_bar.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -58,7 +59,7 @@ class HomeView extends StatelessWidget {
               ),
             ],
           ),
-          //  const BasketBar(),
+          const BasketBar(),
         ],
       ),
       bottomNavigationBar: const CustomNavigationBar(),

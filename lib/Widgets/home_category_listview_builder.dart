@@ -30,14 +30,17 @@ class HomeCategoryListViewBuilder extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
-      scrollDirection: Axis.horizontal,
-      itemCount: categories.length,
-      itemBuilder: (context, index) {
-        return CategoryItem(
-          categoryModel: categories[index],
-        );
-      },
+    return SizedBox(
+      height: 100,
+      child: ListView.builder(
+        scrollDirection: Axis.horizontal,
+        itemCount: categories.length,
+        itemBuilder: (context, index) {
+          return CategoryItem(
+            categoryModel: categories[index],
+          );
+        },
+      ),
     );
   }
 }

@@ -9,22 +9,37 @@ class HomeProductsListviewBuilder extends StatelessWidget {
     ProductModel(
       image: 'assets/images/products/Banana.png',
       name: 'Banana',
+      price: 3.99,
+      rating: 4.8,
+      ratingCount: 287,
     ),
     ProductModel(
       image: 'assets/images/products/lemon.png',
       name: 'Lemon',
+      price: 3.99,
+      rating: 4.8,
+      ratingCount: 287,
     ),
     ProductModel(
       image: 'assets/images/products/Orange.png',
       name: 'Orange',
+      price: 3.99,
+      rating: 4.8,
+      ratingCount: 287,
     ),
     ProductModel(
       image: 'assets/images/products/Pepper.png',
       name: 'Pepper',
+      price: 3.99,
+      rating: 4.8,
+      ratingCount: 287,
     ),
     ProductModel(
       image: 'assets/images/products/purex.png',
       name: 'purex',
+      price: 3.99,
+      rating: 4.8,
+      ratingCount: 287,
     ),
   ];
 
