@@ -4,10 +4,7 @@ import 'package:grabber_grocery_app/Widgets/product_details.dart';
 import 'package:grabber_grocery_app/Widgets/product_image_stack.dart';
 
 class HomeProductsCard extends StatelessWidget {
-  const HomeProductsCard({
-    super.key,
-    required this.productModel,
-  });
+  const HomeProductsCard({super.key, required this.productModel});
 
   final ProductModel productModel;
 

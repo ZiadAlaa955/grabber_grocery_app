@@ -1,6 +1,10 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:grabber_grocery_app/Models/product_model.dart';
 import 'package:grabber_grocery_app/Widgets/home_products_card.dart';
+import 'package:grabber_grocery_app/cubits/product_cubit/product_cubit.dart';
 
 class HomeProductsListviewBuilder extends StatelessWidget {
   HomeProductsListviewBuilder({super.key});
@@ -45,12 +49,34 @@ class HomeProductsListviewBuilder extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
-      scrollDirection: Axis.horizontal,
-      itemCount: products.length,
-      itemBuilder: (context, index) {
-        return HomeProductsCard(
-          productModel: products[index],
+    bool isProductInBasket = false;
+
+    return BlocBuilder<ProductCubit, ProductState>(
+      builder: (context, state) {
+        return ListView.builder(
+          scrollDirection: Axis.horizontal,
+          itemCount: products.length,
+          itemBuilder: (context, index) {
+            final ProductModel product = products[index];
+            if (state is ProductUpdated) {
+              isProductInBasket = state.products.contains(product);
+            }
+            return HomeProductsCard(
+              productModel: ProductModel(
+                price: product.price,
+                rating: product.rating,
+                ratingCount: product.ratingCount,
+                image: product.image,
+                name: product.name,
+                icon: isProductInBasket
+                    ? const Icon(Icons.clear, color: Colors.red)
+                    : const Icon(Icons.add),
+                onTap: () {
+                  BlocProvider.of<ProductCubit>(context).toggle(product);
+                },
+              ),
+            );
+          },
         );
       },
     );

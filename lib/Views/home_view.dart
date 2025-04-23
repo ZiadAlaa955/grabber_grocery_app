@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:grabber_grocery_app/Models/product_model.dart';
 import 'package:grabber_grocery_app/Utils/app_colors.dart';
 import 'package:grabber_grocery_app/Widgets/app_bar_row.dart';
 import 'package:grabber_grocery_app/Widgets/home_category_listview_builder.dart';

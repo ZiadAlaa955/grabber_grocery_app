@@ -6,15 +6,15 @@ class ProductModel {
   final double price;
   final double rating;
   final int ratingCount;
-  // final Function()? onTap;
-  // final Widget icon;
+  final Function()? onTap;
+  final Widget? icon;
 
   ProductModel({
     required this.price,
     required this.rating,
     required this.ratingCount,
-    //  this.onTap,
-    // required this.icon,
+    this.onTap,
+    this.icon,
     required this.image,
     required this.name,
   });

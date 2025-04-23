@@ -5,14 +5,8 @@ sealed class ProductState {}
 
 final class ProductInitial extends ProductState {}
 
-final class ProductAdd extends ProductState {
-  final ProductModel product;
+final class ProductUpdated extends ProductState {
+  final List<ProductModel> products;
 
-  ProductAdd({required this.product});
-}
-
-final class ProductRemove extends ProductState {
-  final ProductModel product;
-
-  ProductRemove({required this.product});
+  ProductUpdated({required this.products});
 }
