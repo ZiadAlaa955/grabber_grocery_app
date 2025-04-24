@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:grabber_grocery_app/Utils/app_router.dart';
 import 'package:grabber_grocery_app/cubits/product_cubit/product_cubit.dart';
 
@@ -18,7 +19,7 @@ class GrabberApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         routerConfig: AppRouter().router,
         theme: ThemeData(
-          useMaterial3: true,
+          fontFamily: GoogleFonts.inter().fontFamily,
           scaffoldBackgroundColor: Colors.white,
         ),
       ),

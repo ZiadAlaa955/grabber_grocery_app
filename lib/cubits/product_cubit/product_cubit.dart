@@ -20,6 +20,11 @@ class ProductCubit extends Cubit<ProductState> {
     emit(ProductUpdated(products: basket));
   }
 
+  void clearBasket() {
+    basket.clear();
+    emit(ProductUpdated(products: basket));
+  }
+
   bool isProductInBasket(ProductModel product) => basket.contains(product);
 
   bool isBsketEmpty() => basket.isEmpty;

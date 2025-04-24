@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class AppBarRow extends StatelessWidget {
   const AppBarRow({super.key});
@@ -14,10 +13,9 @@ class AppBarRow extends StatelessWidget {
           height: 16,
         ),
         const SizedBox(width: 12),
-        Text(
+        const Text(
           '61 Hopper street..',
           style: TextStyle(
-            fontFamily: GoogleFonts.inter().fontFamily,
             fontSize: 19,
             fontWeight: FontWeight.w600,
           ),
@@ -29,7 +27,7 @@ class AppBarRow extends StatelessWidget {
         const Spacer(),
         SvgPicture.asset(
           'assets/images/icons/basket.svg',
-          height: 24,
+          height: 25,
         ),
       ],
     );

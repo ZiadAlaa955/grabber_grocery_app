@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:grabber_grocery_app/Models/product_model.dart';
 
 class ProductDetails extends StatelessWidget {
@@ -16,8 +15,7 @@ class ProductDetails extends StatelessWidget {
         children: [
           Text(
             productModel.name,
-            style: TextStyle(
-              fontFamily: GoogleFonts.inter().fontFamily,
+            style: const TextStyle(
               fontWeight: FontWeight.w900,
             ),
           ),
@@ -31,9 +29,8 @@ class ProductDetails extends StatelessWidget {
               ),
               const SizedBox(width: 8),
               Text(
-                '4.8 (287)',
-                style: TextStyle(
-                  fontFamily: GoogleFonts.inter().fontFamily,
+                '${productModel.rating} (${productModel.ratingCount})',
+                style: const TextStyle(
                   fontWeight: FontWeight.w600,
                   fontSize: 12,
                 ),
@@ -42,9 +39,8 @@ class ProductDetails extends StatelessWidget {
           ),
           const SizedBox(height: 5),
           Text(
-            '\$3.99',
-            style: TextStyle(
-              fontFamily: GoogleFonts.inter().fontFamily,
+            '\$${productModel.price}',
+            style: const TextStyle(
               fontWeight: FontWeight.w900,
             ),
           ),
